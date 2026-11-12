@@ -1,0 +1,78 @@
+@import "tailwindcss";
+
+@layer base {
+  * {
+    -webkit-tap-highlight-color: transparent;
+  }
+  
+  body {
+    touch-action: pan-y pinch-zoom;
+    overscroll-behavior-y: none;
+    user-select: none;
+  }
+}
+
+/* Custom canvas cursor & touch control */
+canvas.drawing-canvas {
+  touch-action: none;
+}
+
+/* Custom bouncy animations for kids */
+@keyframes cuteBounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes wiggle {
+  0%, 100% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(-4deg);
+  }
+  75% {
+    transform: rotate(4deg);
+  }
+}
+
+@keyframes pulseSubtle {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.04);
+  }
+}
+
+.animate-cute-bounce {
+  animation: cuteBounce 2.4s ease-in-out infinite;
+}
+
+.animate-wiggle {
+  animation: wiggle 1.2s ease-in-out infinite;
+}
+
+.animate-pulse-subtle {
+  animation: pulseSubtle 2s ease-in-out infinite;
+}
+
+/* Custom scrollbars that look rounded and cute */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #FFF5DE;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb {
+  background: #FFB6C8;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #FFA0B6;
+}

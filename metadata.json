@@ -1,0 +1,6 @@
+{
+  "name": "Color & Learn – Little Genius",
+  "description": "Educational coloring, drawing, and early learning app for children aged 2–8 with flood-fill coloring, tracing, ABCs, numbers, animals, and mini-games.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
